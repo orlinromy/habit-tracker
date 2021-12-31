@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Habit Tracker 
+#### Video Demo: https://youtu.be/AnN7wWbG04I
+#### Description: Habit Tracker web-based app that allows user to track their daily habit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tech Stack
+- HTML
+- CSS (used google fonts import and CSS Flexbox)
+- JavaScript (ES6)
+- React (React Hooks)
 
-## Available Scripts
+# Setup 
+- Clone this repository
+- Install the necessary npm modules in the directory
+```
+npm install
+```
+- Start the app using this command
+```
+npm start
+```
 
-In the project directory, you can run:
+# Files
+All components of the app are stored in `src/components` folder. Below is the description for each component:
+#### `Header.jsx`
+Contains the title, today's date, and indicate if it's in delete or normal mode
+#### `Footer.jsx` 
+Contains Add Habit and Delete Habit buttons
+#### `Habit.jsx`
+Build a card component that corresponds to each habit submitted by user
+### `CreateHabitModal.jsx`
+Using React Hooks (refs) and Portals, this lets the parent component to control local state changes and allows a child component in a DOM node to be rendered outside the parent DOM component hierarchy, which is what we want when building a dialog box (Source: [dev.to](https://dev.to/viclafouch/build-a-complete-modal-component-with-react-hooks-2fk8)).   
+#### `AddHabitForm.jsx`
+Contains a HTML form that allows user to add habit, set the frequency, and submit the habit. It's the child component of CreateHabitModal - when the user click on "Add Habit" button, it opens up a dialog box with a form to fill in.
+#### `App.jsx`
+All components are imported to this `.jsx` file to be rendered, which then will be passed to `index.js` to be executed.
 
-### `npm start`
+# Future Improvement
+- Provide authentication for users, enable them to login and track their habit stats
+- UI/UX refinement
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Credits
+- CS50 
+- Stack Overflow
+- [dev.to](https://dev.to/viclafouch/build-a-complete-modal-component-with-react-hooks-2fk8)

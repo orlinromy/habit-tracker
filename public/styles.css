@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=M+PLUS+Rounded+1c&family=Work+Sans:wght@400&display=swap');
+
+:root {
+    --shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    --button-color: #AED2D3;
+    --backg-color: #FEFBF3;
+    --box-color: #F8F0DF;
+    --accent-color: #7D7D7D;
+    --grey-out: #999999;
+    --grey-out-2: #615d5d;
+    --text-color: #1a1919;
+    --title-font: "DM Sans", sans-serif;
+    --h2-font: "Work Sans", sans-serif;
+    --main-font: "M PLUS Rounded 1c", sans-serif;
+}
+
+body {
+    background-color: var(--box-color);
+}
+
+.habit-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-title {
+    font-family: var(--title-font);
+    font-size: 48px;
+    text-align: center;
+    color: var(--text-color);
+    flex: 1
+}
+
+
+
+.no-habit {
+    font-family: var(--h2-font);
+    font-size: 23px;
+    color: var(--grey-out);
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--h2-font);
+    font-size: 26px;
+    color: var(--grey-out-2);
+}
+.header {
+    font-family: var(--h2-font);
+    font-size: 26px;
+    text-align: center;
+    color: var(--grey-out-2);
+}
+
+.header > .header-delete {
+    font-family: var(--h2-font);
+    text-align: center;
+    color: #A55B5A;
+    margin: 2px;
+}
+
+.habit-area {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 8;
+}
+
+.habit-card {
+    animation: fade-in;
+    animation-duration: 0.5s;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    width: 35vw;
+    height: 75px;
+    font-family: var(--main-font);
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--backg-color);
+    color: var(--text-color);
+}
+
+.habit-title {
+    flex: 4;
+    text-align: center;
+}
+
+.habit-freq {
+    font-size: 12px;
+    font-family: var(--h2-font);
+    margin: 0px;
+    color: var(--grey-out-2);
+}
+
+.habit-card button {
+    margin: auto;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    background-color: var(--button-color);
+    color: var(--text-color);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-habit {
+    width: 35vw;
+    border: none;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+    font-family: "DM Sans";
+    font-size: 15px;
+    letter-spacing:3px;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--accent-color);
+    margin: 20px 10px;
+}
+
+.add-habit-disabled {
+    width: 35vw;
+    border: none;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+    font-family: "DM Sans";
+    font-size: 15px;
+    letter-spacing:3px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #CFCFCF;
+    margin: 20px 10px;
+}
+
+.delete-habit {
+    width: 35vw;
+    border: none;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+    font-family: "DM Sans";
+    font-size: 15px;
+    letter-spacing:3px;
+    padding: 10px 20px;
+    background-color: #955251;
+    color: white; 
+    margin: 0px 10px;
+}
+
+.footer {
+    flex: 1;
+}
+
+.MuiTextField-root {
+    font-family: var(--main-font);
+}
+
+.habit-submit-button {
+    margin: 10px;
+    width: 25%;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding:10px;
+    border-radius: 5px;
+    font-family: var(--title-font);
+}
+
+
+
+
+/* The snippets below is from https://dev.to/viclafouch/build-a-complete-modal-component-with-react-hooks-2fk8 with modification */
+.modal {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em 1em;
+    z-index: 999999;
+    box-sizing: border-box;
+}
+
+.modal.modal-fade {
+    animation: fade-in;
+    animation-duration:1s;
+    opacity: 0;
+}
+
+.modal > .modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--text-color);
+    opacity: 80%;
+    top: 0;
+    left: 0;
+}
+
+.modal > .modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #5e5e5e;
+    cursor: pointer;
+    font-size: 1.25em;
+    padding: 7px;
+    background: rgba(255, 255, 255, 0.749);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+
+.modal > .modal-close:hover {
+    background: rgba(255, 255, 255, 0.989);
+    transition-duration: 0.2s;
+}
+
+.modal > .modal-body {
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    
+    border-radius: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+    width: 50%;
+    
+    padding: 15px 20px;
+    background-color: var(--backg-color);
+    color: var(--text-color);
+    opacity: 100%;
+}
+
+
+@keyframes fade-in {
+    0% {
+        animation-timing-function: cubic-bezier(0.2242, 0.7499, 0.3142, 0.8148);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
