@@ -1,6 +1,5 @@
 # Habit Tracker 
-#### Video Demo: https://youtu.be/AnN7wWbG04I
-#### Description: Habit Tracker web-based app that allows user to track their daily habit
+Demo: https://codesandbox.io/s/zen-euclid-4mdj3?file=/src/index.js
 
 # Tech Stack
 - HTML
